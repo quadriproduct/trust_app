@@ -1,2 +1,15 @@
-# Trust_app is a web based application that provides intuitive payment solutions for users and business in web2 and web3. We create a bridge for employers to pay their employees in crypto
-We also provide a suite of solution ranging from insurance, payments, yield farming, and borrowing to users in order to onboard the next billion users into web3 and crypto
+# Basic Sample Hardhat Project
+
+This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, a sample script that deploys that contract, and an example of a task implementation, which simply lists the available accounts.
+
+Try running some of the following tasks:
+
+```shell
+npx hardhat accounts
+npx hardhat compile
+npx hardhat clean
+npx hardhat test
+npx hardhat node
+node scripts/sample-script.js
+npx hardhat help
+```

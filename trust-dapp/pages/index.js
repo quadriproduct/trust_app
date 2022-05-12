@@ -338,22 +338,19 @@ export default function Home() {
   }
 
   return (
+
     <div>
       <Head>
         <title>Trust</title>
-        <meta name="description" content="CryptoDevs DAO" />
+        <meta name="description" content="Trust dApp" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <div className={styles.main}>
         <div>
           <h1 className={styles.title}>Welcome to Trust!</h1>
-          <div className={styles.description}>Where web2 and web3 users strive using crypto.
-          <br />
-          Sign up now to become part of the new world, you are safe with us.
-          <br />
-          </div>
-          <div className={styles.description}>
+          <div className={styles.description}>Where Web2 and Web3 users strive!</div>
+          <div className={styles.description}> Sign up and join the new world of finance.
             {/* Your CryptoDevs NFT Balance: {nftBalance} */}
             <br />
             {/* Treasury Balance: {formatEther(treasuryBalance)} ETH */}
