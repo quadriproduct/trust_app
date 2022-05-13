@@ -296,14 +296,15 @@ export default function Home() {
       return (
         <div>
           {proposals.map((p, index) => (
-            <div key={index} className={styles.proposalCard}>
-              <p>Proposal ID: {p.proposalId}</p>
-              <p>Fake NFT to Purchase: {p.nftTokenId}</p>
-              <p>Deadline: {p.deadline.toLocaleString()}</p>
+             <div key={index} className={styles.proposalCard}>
+            <p>Proposal ID: {p.proposalId}</p>
+               <p>Fake NFT to Purchase: {p.nftTokenId}</p>
+               <p>Deadline: {p.deadline.toLocaleString()}</p>
               <p>Yay Votes: {p.yayVotes}</p>
               <p>Nay Votes: {p.nayVotes}</p>
               <p>Executed?: {p.executed.toString()}</p>
-              {p.deadline.getTime() > Date.now() && !p.executed ? (
+               {p.deadline.getTime() > Date.now() && !p.executed ?
+            (
                 <div className={styles.flex}>
                   <button
                     className={styles.button2}
@@ -318,7 +319,9 @@ export default function Home() {
                     Vote NAY
                   </button>
                 </div>
-              ) : p.deadline.getTime() < Date.now() && !p.executed ? (
+              )
+              : p.deadline.getTime() < Date.now() && !p.executed ?
+              (
                 <div className={styles.flex}>
                   <button
                     className={styles.button2}
