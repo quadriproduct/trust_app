@@ -3,6 +3,7 @@ import { formatEther } from "ethers/lib/utils";
 import Head from "next/head";
 import { useEffect, useRef, useState } from "react";
 import Web3Modal from "web3modal";
+import Button from 'react-bootstrap/Button';
 // import {
 //   CRYPTODEVS_DAO_ABI,
 //   CRYPTODEVS_DAO_CONTRACT_ADDRESS,
@@ -295,14 +296,15 @@ export default function Home() {
       return (
         <div>
           {proposals.map((p, index) => (
-            <div key={index} className={styles.proposalCard}>
-              <p>Proposal ID: {p.proposalId}</p>
-              <p>Fake NFT to Purchase: {p.nftTokenId}</p>
-              <p>Deadline: {p.deadline.toLocaleString()}</p>
+             <div key={index} className={styles.proposalCard}>
+            <p>Proposal ID: {p.proposalId}</p>
+               <p>Fake NFT to Purchase: {p.nftTokenId}</p>
+               <p>Deadline: {p.deadline.toLocaleString()}</p>
               <p>Yay Votes: {p.yayVotes}</p>
               <p>Nay Votes: {p.nayVotes}</p>
               <p>Executed?: {p.executed.toString()}</p>
-              {p.deadline.getTime() > Date.now() && !p.executed ? (
+               {p.deadline.getTime() > Date.now() && !p.executed ?
+            (
                 <div className={styles.flex}>
                   <button
                     className={styles.button2}
@@ -317,7 +319,9 @@ export default function Home() {
                     Vote NAY
                   </button>
                 </div>
-              ) : p.deadline.getTime() < Date.now() && !p.executed ? (
+              )
+              : p.deadline.getTime() < Date.now() && !p.executed ?
+              (
                 <div className={styles.flex}>
                   <button
                     className={styles.button2}
@@ -346,6 +350,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossOrigin="anonymous" />
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossOrigin="anonymous"></script>
+        <script src="https://unpkg.com/react/umd/react.production.min.js" crossorigin></script>
+
 
       </Head>
 
