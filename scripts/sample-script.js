@@ -20,6 +20,7 @@ async function main() {
   const apiConsumer = APIConsumer.deploy();
 
   await tcfa.deployed();
+  await apiConsumer.deployed();
 
   console.log("TrustCFA deployed to:", tcfa.address);
 }
